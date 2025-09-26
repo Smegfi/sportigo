@@ -1,0 +1,126 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# All files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# YAML files
+[*.{yml,yaml}]
+indent_size = 2
+
+# Python files
+[*.py]
+indent_size = 4
+
+# JavaScript/TypeScript files
+[*.{js,ts,jsx,tsx}]
+indent_size = 2
+
+# CSS/SCSS files
+[*.{css,scss,sass}]
+indent_size = 2
+
+# HTML files
+[*.html]
+indent_size = 2
+
+# XML files
+[*.xml]
+indent_size = 2
+
+# Shell scripts
+[*.sh]
+indent_size = 2
+
+# Makefile
+[Makefile]
+indent_style = tab
+
+# Dockerfile
+[Dockerfile]
+indent_size = 2
+
+# Configuration files
+[*.{ini,cfg,conf}]
+indent_size = 2
+
+# SQL files
+[*.sql]
+indent_size = 2
+
+# Go files
+[*.go]
+indent_size = 4
+indent_style = tab
+
+# Rust files
+[*.rs]
+indent_size = 4
+
+# Java files
+[*.java]
+indent_size = 4
+
+# C/C++ files
+[*.{c,cpp,h,hpp}]
+indent_size = 4
+
+# PHP files
+[*.php]
+indent_size = 4
+
+# Ruby files
+[*.rb]
+indent_size = 2
+
+# Swift files
+[*.swift]
+indent_size = 4
+
+# Kotlin files
+[*.kt]
+indent_size = 4
+
+# Scala files
+[*.scala]
+indent_size = 2
+
+# R files
+[*.r]
+indent_size = 2
+
+# MATLAB files
+[*.m]
+indent_size = 4
+
+# Assembly files
+[*.{asm,s}]
+indent_size = 4
+
+# Batch files
+[*.{bat,cmd}]
+end_of_line = crlf
+
+# PowerShell files
+[*.ps1]
+end_of_line = crlf
+
+# VBScript files
+[*.vbs]
+end_of_line = crlf
