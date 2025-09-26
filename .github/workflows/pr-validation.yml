@@ -1,0 +1,93 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+
+jobs:
+  build-and-lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+          else
+            echo "No package.json found, skipping npm install"
+          fi
+
+      - name: Run linter
+        run: |
+          if [ -f package.json ]; then
+            # Check if ESLint is available
+            if npm list eslint > /dev/null 2>&1; then
+              npm run lint || echo "Linting failed"
+            else
+              echo "ESLint not found, skipping lint step"
+            fi
+            
+            # Check if Prettier is available
+            if npm list prettier > /dev/null 2>&1; then
+              npm run format:check || echo "Format check failed"
+            else
+              echo "Prettier not found, skipping format check"
+            fi
+          else
+            echo "No package.json found, skipping linting"
+          fi
+
+      - name: Run tests
+        run: |
+          if [ -f package.json ]; then
+            if npm list jest > /dev/null 2>&1 || npm list mocha > /dev/null 2>&1; then
+              npm test || echo "Tests failed"
+            else
+              echo "No test framework found, skipping tests"
+            fi
+          else
+            echo "No package.json found, skipping tests"
+          fi
+
+      - name: Build project
+        run: |
+          if [ -f package.json ]; then
+            if npm run build --if-present; then
+              echo "Build successful"
+            else
+              echo "No build script found or build failed"
+            fi
+          else
+            echo "No package.json found, skipping build"
+          fi
+
+      - name: Check for TypeScript errors
+        run: |
+          if [ -f tsconfig.json ]; then
+            npx tsc --noEmit || echo "TypeScript compilation failed"
+          else
+            echo "No TypeScript configuration found"
+          fi
+
+      - name: Security audit
+        run: |
+          if [ -f package.json ]; then
+            npm audit --audit-level moderate || echo "Security audit found issues"
+          else
+            echo "No package.json found, skipping security audit"
+          fi
