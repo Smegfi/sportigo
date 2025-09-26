@@ -12,7 +12,8 @@ This directory contains a simple development container configuration for the Spo
 - TypeScript support
 - Prettier code formatting
 - JSON support
-- GitHub Copilot
+- EditorConfig
+- Dev Containers
 
 ## Getting Started
 
