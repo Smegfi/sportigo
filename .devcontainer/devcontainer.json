@@ -29,7 +29,5 @@
       "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "npm install || echo 'No package.json found'",
-  "remoteUser": "node",
-  "workspaceFolder": "/workspace"
+  "remoteUser": "node"
 }
