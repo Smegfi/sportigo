@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { BarChart3, Calendar, Shield, Trophy, Users, Zap } from "lucide-react";
 import Link from "next/link";
-import { Trophy, Users, Calendar, BarChart3, Shield, Zap } from "lucide-react";
 
 export default function Home() {
    return (
@@ -28,8 +28,8 @@ export default function Home() {
                   Elevate Your <span className="text-blue-600">Sports</span> Experience
                </h1>
                <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto">
-                  The ultimate platform for managing sports events, teams, and competitions. 
-                  Streamline your organization and boost engagement with our comprehensive sports management solution.
+                  The ultimate platform for managing sports events, teams, and competitions. Streamline your organization and boost engagement with our
+                  comprehensive sports management solution.
                </p>
                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <Link href="/login">
@@ -49,12 +49,8 @@ export default function Home() {
             <div className="container mx-auto px-4">
                <div className="max-w-6xl mx-auto">
                   <div className="text-center mb-16">
-                     <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
-                        Everything You Need for Sports Management
-                     </h2>
-                     <p className="text-xl text-slate-600 dark:text-slate-400">
-                        Powerful features designed to streamline your sports organization
-                     </p>
+                     <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">Everything You Need for Sports Management</h2>
+                     <p className="text-xl text-slate-600 dark:text-slate-400">Powerful features designed to streamline your sports organization</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -156,9 +152,7 @@ export default function Home() {
          <section className="py-20">
             <div className="container mx-auto px-4">
                <div className="max-w-4xl mx-auto text-center">
-                  <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-6">
-                     Ready to Transform Your Sports Organization?
-                  </h2>
+                  <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-6">Ready to Transform Your Sports Organization?</h2>
                   <p className="text-xl text-slate-600 dark:text-slate-400 mb-8">
                      Join thousands of sports organizations already using Sportigo to streamline their operations and enhance their community engagement.
                   </p>
@@ -186,32 +180,66 @@ export default function Home() {
                            <Trophy className="h-6 w-6 text-blue-400" />
                            <span className="text-xl font-bold">Sportigo</span>
                         </div>
-                        <p className="text-slate-400 text-sm">
-                           The ultimate platform for sports management and community engagement.
-                        </p>
+                        <p className="text-slate-400 text-sm">The ultimate platform for sports management and community engagement.</p>
                      </div>
                      <div>
                         <h3 className="font-semibold mb-4">Product</h3>
                         <ul className="space-y-2 text-sm text-slate-400">
-                           <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                           <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-                           <li><a href="#" className="hover:text-white transition-colors">API</a></li>
+                           <li>
+                              <a href="#" className="hover:text-white transition-colors">
+                                 Features
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" className="hover:text-white transition-colors">
+                                 Pricing
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" className="hover:text-white transition-colors">
+                                 API
+                              </a>
+                           </li>
                         </ul>
                      </div>
                      <div>
                         <h3 className="font-semibold mb-4">Support</h3>
                         <ul className="space-y-2 text-sm text-slate-400">
-                           <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-                          <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-                          <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                           <li>
+                              <a href="#" className="hover:text-white transition-colors">
+                                 Help Center
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" className="hover:text-white transition-colors">
+                                 Documentation
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" className="hover:text-white transition-colors">
+                                 Contact
+                              </a>
+                           </li>
                         </ul>
                      </div>
                      <div>
                         <h3 className="font-semibold mb-4">Company</h3>
                         <ul className="space-y-2 text-sm text-slate-400">
-                          <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                          <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                          <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+                           <li>
+                              <a href="#" className="hover:text-white transition-colors">
+                                 About
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" className="hover:text-white transition-colors">
+                                 Blog
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" className="hover:text-white transition-colors">
+                                 Careers
+                              </a>
+                           </li>
                         </ul>
                      </div>
                   </div>

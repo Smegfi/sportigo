@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Link from "next/link";
 import { Trophy } from "lucide-react";
+import Link from "next/link";
 
 export default function LoginPage() {
    return (
@@ -13,20 +13,14 @@ export default function LoginPage() {
                      <Trophy className="h-8 w-8 text-blue-600" />
                      <span className="text-2xl font-bold text-slate-900 dark:text-white">Sportigo</span>
                   </Link>
-                  <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-                     Welcome Back
-                  </h1>
-                  <p className="text-slate-600 dark:text-slate-400">
-                     Sign in to your Sportigo account
-                  </p>
+                  <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">Welcome Back</h1>
+                  <p className="text-slate-600 dark:text-slate-400">Sign in to your Sportigo account</p>
                </div>
 
                <Card>
                   <CardHeader>
                      <CardTitle>Sign In</CardTitle>
-                     <CardDescription>
-                        Enter your credentials to access your account
-                     </CardDescription>
+                     <CardDescription>Enter your credentials to access your account</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                      <div className="space-y-2">
