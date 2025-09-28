@@ -1,33 +1,33 @@
 {
-  "name": "Sportigo Development Container",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
-  "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
-  },
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-          "source.organizeImports": "explicit"
-        }
-      },
-      "extensions": [
-        "ms-vscode.vscode-typescript-next",
-        "esbenp.prettier-vscode",
-        "ms-vscode.vscode-json",
-        "EditorConfig.EditorConfig",
-        "ms-vscode-remote.remote-containers"
-      ]
-    }
-  },
-  "forwardPorts": [3000],
-  "portsAttributes": {
-    "3000": {
-      "label": "Development Server",
-      "onAutoForward": "notify"
-    }
-  },
-  "remoteUser": "node"
+   "name": "Sportigo Development Container",
+   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+   "features": {
+      "ghcr.io/devcontainers/features/git:1": {}
+   },
+   "customizations": {
+      "vscode": {
+         "settings": {
+            "terminal.integrated.defaultProfile.linux": "bash",
+            "editor.formatOnSave": true,
+            "editor.codeActionsOnSave": {
+               "source.organizeImports": "explicit"
+            }
+         },
+         "extensions": [
+            "ms-vscode.vscode-typescript-next",
+            "esbenp.prettier-vscode",
+            "ms-vscode.vscode-json",
+            "EditorConfig.EditorConfig",
+            "ms-vscode-remote.remote-containers"
+         ]
+      }
+   },
+   "forwardPorts": [3000],
+   "portsAttributes": {
+      "3000": {
+         "label": "Development Server",
+         "onAutoForward": "notify"
+      }
+   },
+   "remoteUser": "node"
 }

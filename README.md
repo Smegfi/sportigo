@@ -16,7 +16,7 @@ A clean, minimalistic Next.js application with shadcn/ui components, TypeScript,
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
@@ -57,6 +57,7 @@ npx shadcn@latest add [component-name]
 ```
 
 For example:
+
 ```bash
 npx shadcn@latest add input
 npx shadcn@latest add dialog
