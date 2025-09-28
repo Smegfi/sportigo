@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/ui/themes/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -20,8 +21,12 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
    return (
-      <html lang="en">
-         <body className="antialiased">{children}</body>
+      <html lang="en" suppressHydrationWarning>
+         <body className="antialiased">
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+               {children}
+            </ThemeProvider>
+         </body>
       </html>
    );
 }
