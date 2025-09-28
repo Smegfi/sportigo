@@ -1,9 +1,18 @@
+import { ThemeProvider } from "@/components/ui/themes/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-   title: "Sportigo",
-   description: "Sportigo is a platform for managing sports events and teams",
+   title: "Sportigo - Elevate Your Sports Experience",
+   description:
+      "The ultimate platform for managing sports events, teams, and competitions. Streamline your organization and boost engagement with our comprehensive sports management solution.",
+   keywords: "sports management, team management, tournament organization, sports events, sports platform",
+   authors: [{ name: "Sportigo Team" }],
+   openGraph: {
+      title: "Sportigo - Elevate Your Sports Experience",
+      description: "The ultimate platform for managing sports events, teams, and competitions.",
+      type: "website",
+   },
 };
 
 interface RootLayoutProps {
@@ -12,8 +21,12 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
    return (
-      <html lang="en">
-         <body className="antialiased">{children}</body>
+      <html lang="en" suppressHydrationWarning>
+         <body className="antialiased">
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+               {children}
+            </ThemeProvider>
+         </body>
       </html>
    );
 }
